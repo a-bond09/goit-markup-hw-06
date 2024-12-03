@@ -186,7 +186,7 @@ a {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url("../images/hero/hero.jpg");
+    url("../images/hero/hero_mobile_1x.jpg");
   max-width: 1440px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -195,6 +195,56 @@ a {
   background-color: #2e2f42;
   padding-top: 188px;
   padding-bottom: 188px;
+}
+
+@media only screen and (max-width: 767px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/hero/hero_mobile_2x.jpg");
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/hero/hero_tablet_1x.jpg");
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/hero/hero_tablet_2x.jpg");
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/hero/hero_desktop_1x.jpg");
+  }
+}
+
+@media only screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/hero/hero_desktop_2x.jpg");
+  }
 }
 .hero-title {
   max-width: 496px;
@@ -493,6 +543,13 @@ a {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: baseline;
+    text-align: left;
+    gap: 24px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .page-footer .container {
+    flex-wrap: nowrap;
   }
 }
 .page-footer {
@@ -500,6 +557,12 @@ a {
   padding-top: 96px;
   padding-bottom: 96px;
 }
+@media only screen and (min-width: 768px) {
+  .footer-start {
+    margin-left: 100px;
+  }
+}
+
 @media only screen and (min-width: 1158px) {
   .page-footer {
     padding-top: 100px;
@@ -508,7 +571,7 @@ a {
 }
 @media only screen and (min-width: 1158px) {
   .footer-start {
-    margin-right: 120px;
+    margin-left: 120px;
   }
 }
 .footer-logo {
@@ -569,9 +632,11 @@ a {
   align-items: center;
 } */
 
-/* .footer-subscribe {
-  margin-left: 0px;
-} */
+@media only screen and (min-width: 768px) {
+  .footer-subscribe {
+    margin-left: 108px;
+  }
+}
 
 .text-subscribe {
   font-weight: 500;
@@ -593,7 +658,6 @@ a {
   .form-subscribe {
     gap: 24px;
     flex-direction: row;
-    margin-left: 108px;
   }
 }
 .footer-subscribe-email {
