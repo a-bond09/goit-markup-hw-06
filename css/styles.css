@@ -181,6 +181,16 @@ a {
 .contacts-link:focus {
   color: #404bbf;
 }
+.burger-menu {
+  border: none;
+  background-color: transparent;
+}
+@media only screen and (min-width: 768px) {
+  .burger-menu {
+    display: none;
+  }
+}
+
 .hero {
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -943,4 +953,29 @@ a {
 .form-button:hover,
 .form-button:focus {
   background-color: #404bbf;
+}
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background-color: #ffffff;
+  z-index: 100;
+  padding: 72px 24px 40px 16px;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  visibility: hidden;
+  transition: var(--anim-fast);
+  transition-property: transform, visibility;
+}
+
+.mobile-menu.mobile-open {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.mobile-menu-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background-color: transparent;
 }
