@@ -1,7 +1,13 @@
+:root {
+  --main-color: #4d5ae5;
+  --white-color: #ffffff;
+  --anim-fast: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
-  background-color: #ffffff;
+  background-color: var(--white-color);
 }
 ul,
 ol {
@@ -40,9 +46,9 @@ a {
   max-width: 320px;
   padding: 0 15px;
   margin: 0 auto;
-
+  /* 
   outline: 2px solid red;
-  outline-offset: -2px;
+  outline-offset: -2px; */
 }
 
 @media only screen and (min-width: 768px) {
@@ -87,7 +93,7 @@ a {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #4d5ae5;
+  color: var(--main-color);
 }
 .header-logo {
   padding: 24px 0;
@@ -117,10 +123,11 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--anim-fast);
+  transition-property: color;
 }
 .nav-link.current {
-  color: #404bbf;
+  color: var(--main-color);
   position: relative;
 }
 .nav-link.current::after {
@@ -128,14 +135,14 @@ a {
   position: absolute;
   width: 100%;
   height: 4px;
-  background-color: #404bbf;
+  background-color: var(--main-color);
   left: 0;
   bottom: -1px;
   border-radius: 2px;
 }
 .nav-link:hover,
 .nav-link:focus {
-  color: #404bbf;
+  color: var(--main-color);
 }
 .contacts {
   font-style: normal;
@@ -151,7 +158,8 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--anim-fast);
+  transition-property: color;
 }
 @media only screen and (min-width: 768px) {
   .contacts-list {
@@ -179,7 +187,7 @@ a {
 
 .contacts-link:hover,
 .contacts-link:focus {
-  color: #404bbf;
+  color: var(--main-color);
 }
 .burger-menu {
   border: none;
@@ -265,7 +273,7 @@ a {
   line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
-  color: #ffffff;
+  color: var(--white-color);
 }
 .hero-button {
   border-radius: 4px;
@@ -275,19 +283,20 @@ a {
   border: none;
   display: block;
   margin: 0 auto;
-  background-color: #4d5ae5;
+  background-color: var(--main-color);
   cursor: pointer;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  color: #ffffff;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--white-color);
+  transition: var(--anim-fast);
+  transition-property: background-color;
 }
 .hero-button:hover,
 .hero-button:focus {
-  background-color: #404bbf;
+  background-color: var(--main-color);
 }
 
 .values-list {
@@ -432,24 +441,25 @@ a {
   height: 40px;
 }
 .link-socials {
-  background-color: #4d5ae5;
+  background-color: var(--main-color);
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--anim-fast);
+  transition-property: ackground-color;
 }
 .link-socials:hover,
 .link-socials:focus {
-  background-color: #404bbf;
+  background-color: var(--main-color);
 }
 .icon-socials {
   fill: #f4f4fd;
 }
 .team-item {
-  background-color: #ffffff;
+  background-color: var(--white-color);
 
   border-radius: 0 0 4px 4px;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
@@ -476,7 +486,8 @@ a {
 }
 .portfolio-item {
   width: calc(100% - 24px);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--anim-fast);
+  transition-property: box-shadow;
 }
 
 @media only screen and (min-width: 768px) {
@@ -504,7 +515,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #4d5ae5;
+  background-color: var(--main-color);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -512,7 +523,8 @@ a {
   color: #f4f4fd;
   padding: 40px 32px;
   transform: translatey(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--anim-fast);
+  transition-property: transform;
 }
 .portfolio-item:hover .overlay {
   transform: translateY(0);
@@ -605,7 +617,7 @@ a {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #ffffff;
+  color: var(--white-color);
   margin-bottom: 16px;
 }
 .footer-list-socials {
@@ -619,14 +631,15 @@ a {
   height: 40px;
 }
 .footer-link-socials {
-  background-color: #4d5ae5;
+  background-color: var(--main-color);
   border-radius: 50%;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--anim-fast);
+  transition-property: background-color;
 }
 .footer-link-socials:hover,
 .footer-link-socials:focus {
@@ -635,12 +648,6 @@ a {
 .footer-icon-socials {
   fill: #f4f4fd;
 }
-
-/* .page-footer .container {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-} */
 
 @media only screen and (min-width: 768px) {
   .footer-subscribe {
@@ -653,7 +660,7 @@ a {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #ffffff;
+  color: var(--white-color);
   margin-bottom: 16px;
 }
 .form-subscribe {
@@ -671,7 +678,7 @@ a {
   }
 }
 .footer-subscribe-email {
-  border: 1px solid #ffffff;
+  border: 1px solid var(--white-color);
   border-radius: 4px;
   width: 264px;
   height: 40px;
@@ -681,38 +688,40 @@ a {
   padding-bottom: 8px;
   padding-left: 16px;
   padding-right: 16px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--anim-fast);
+  transition-property: border-color;
   outline: transparent;
   font-weight: 400;
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
-  color: #ffffff;
+  color: var(--white-color);
 }
 .footer-subscribe-email::placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
-  color: #ffffff;
+  color: var(--white-color);
 }
 .footer-subscribe-email:focus {
-  border-color: #4d5ae5;
+  border-color: var(--main-color);
 }
 .button-subscribe {
   border-radius: 4px;
   padding: 8px 24px;
   min-width: 165px;
   height: 40px;
-  background-color: #4d5ae5;
+  background-color: var(--main-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
-  color: #ffffff;
+  color: var(--white-color);
   border: none;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--anim-fast);
+  transition-property: background-color;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -721,12 +730,12 @@ a {
 .form-wrapper {
 }
 .footer-icon-letter {
-  fill: #ffffff;
+  fill: var(--white-color);
   margin-left: 16px;
 }
 .button-subscribe:hover,
 .button-subscribe:focus {
-  background-color: #404bbf;
+  background-color: var(--main-color);
 }
 .backdrop {
   width: 100%;
@@ -739,8 +748,8 @@ a {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--anim-fast);
+  transition-property: opacity, visibility;
 }
 .backdrop.is-open {
   opacity: 1;
@@ -754,14 +763,23 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 4px;
-  width: 408px;
+  width: 288px;
+
   min-height: 584px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
   padding: 72px 24px 24px 24px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--anim-fast);
+  transition-property: transform;
 }
+
+@media only screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+  }
+}
+
 .close-modal {
   border-radius: 4px;
   width: 24px;
@@ -772,8 +790,8 @@ a {
   position: absolute;
   right: 24px;
   top: 24px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--anim-fast);
+  transition-property: background-color, border;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -781,16 +799,17 @@ a {
   padding: 0;
 }
 .close-modal-icon {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--anim-fast);
+  transition-property: fill;
 }
 .close-modal:hover,
 .close-modal:focus {
-  background-color: #404bbf;
+  background-color: var(--main-color);
   border: none;
 }
 .close-modal:hover .close-modal-icon,
 .close-modal:focus .close-modal-icon {
-  fill: #ffffff;
+  fill: var(--white-color);
 }
 
 .text-modal {
@@ -826,17 +845,19 @@ a {
   padding-bottom: 11px;
   padding-left: 38px;
   outline: transparent;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--anim-fast);
+  transition-property: border-color;
   background-color: transparent;
 }
 .form-icon-input {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--anim-fast);
+  transition-property: fill;
 }
 .form-input:focus {
-  border-color: #4d5ae5;
+  border-color: var(--main-color);
 }
 .form-input:focus + .form-icon-input {
-  fill: #4d5ae5;
+  fill: var(--main-color);
 }
 .form-field-wrapper {
   position: relative;
@@ -868,7 +889,8 @@ a {
   width: 100%;
   resize: none;
   display: block;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--anim-fast);
+  transition-property: border-color;
   outline: transparent;
   height: 120px;
   font-size: 12px;
@@ -878,7 +900,7 @@ a {
   background-color: transparent;
 }
 .comment-input:focus {
-  border-color: #4d5ae5;
+  border-color: var(--main-color);
 }
 .comment-input::placeholder {
   font-weight: 400;
@@ -901,7 +923,7 @@ a {
   line-height: 1.33333;
   text-decoration: underline;
   text-decoration-skip-ink: none;
-  color: #4d5ae5;
+  color: var(--main-color);
 }
 
 .agreement-checkbox {
@@ -914,13 +936,12 @@ a {
   border: 1px solid rgba(46, 47, 66, 0.4);
   fill: transparent;
   border-radius: 2px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--anim-fast);
+  transition-property: background-color, border, fill;
 }
 
 #user-privacy:checked + .agreement-label > .agreement-checkbox {
-  background-color: #404bbf;
+  background-color: var(--main-color);
   border: none;
   fill: #f4f4fd;
 }
@@ -937,27 +958,28 @@ a {
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
-  color: #ffffff;
+  color: var(--white-color);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  background-color: #4d5ae5;
+  background-color: var(--main-color);
   border-radius: 4px;
   padding: 16px 32px;
   min-width: 169px;
   height: 56px;
   outline: transparent;
   border: none;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--anim-fast);
+  transition-property: background-color;
   cursor: pointer;
 }
 
 .form-button:hover,
 .form-button:focus {
-  background-color: #404bbf;
+  background-color: var(--main-color);
 }
 .mobile-menu {
   position: fixed;
   inset: 0;
-  background-color: #ffffff;
+  background-color: var(--white-color);
   z-index: 100;
   padding: 72px 24px 40px 16px;
   display: flex;
@@ -968,7 +990,7 @@ a {
   transition-property: transform, visibility;
 }
 
-.mobile-menu.mobile-open {
+.mobile-menu.is-open {
   transform: translateX(0);
   visibility: visible;
 }
@@ -978,4 +1000,57 @@ a {
   top: 24px;
   right: 24px;
   background-color: transparent;
+}
+
+.mobile-menu-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 20px 0;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11111;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+.mobile-nav-link.current {
+  color: var(--main-color);
+}
+.mobile-contacts-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mobile-contacts-link {
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  font-style: normal;
+}
+.mobile-contacts-link.current {
+  color: var(--main-color);
+}
+.mobile-menu-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.list-socials-mobile {
+  gap: 40px;
 }
