@@ -387,8 +387,7 @@ a {
     margin-bottom: 8px;
   }
 }
-.values-item-icon {
-}
+
 .values-item-title {
   font-weight: 700;
   font-size: 36px;
@@ -780,8 +779,7 @@ a {
   justify-content: center;
   cursor: pointer;
 }
-.form-wrapper {
-}
+
 .footer-icon-letter {
   fill: var(--white-color);
   margin-left: 16px;
