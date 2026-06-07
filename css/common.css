@@ -52,8 +52,8 @@ img {
   /* padding: 96px 16px; */
   margin: 0 auto;
 
-  outline: 2px solid red;
-  outline-offset: -2px;
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
 }
 
 .section-title {
@@ -82,6 +82,6 @@ img {
 }
 
 /* debug mode */
-* {
+/* * {
   background-color: rgb(255, 0, 0, 0.1);
-}
+} */
