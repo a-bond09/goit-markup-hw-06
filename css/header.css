@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* align-items: center; */
+  width: 100%;
 }
 
 .header-logo {
@@ -18,7 +18,6 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   font-family: "Raleway", sans-serif;
-  margin-right: 149px;
   padding-top: 16px;
   padding-bottom: 16px;
 }
@@ -26,6 +25,16 @@
 .logo-accent {
   color: #4d5ae5;
 }
+
+.burger-menu {
+  border: none;
+  background-color: transparent;
+}
+
+.burger-icon {
+  fill: #2e2f42;
+}
+
 .nav-header {
   display: none;
 }
@@ -43,7 +52,7 @@
   display: flex;
   align-items: center;
   column-gap: 40px;
-  margin-right: 340px;
+  /* margin-right: 340px; */
 }
 
 .nav-link {
@@ -108,22 +117,37 @@
 }
 
 @media screen and (min-width: 768px) {
+  .burger-menu {
+    display: none;
+  }
+  .nav-header {
+    font-weight: 500;
+    font-size: 16px;
+    color: #2e2f42;
+    display: block;
+  }
+  .header-address {
+    display: block;
+  }
+  .header-address-list {
+    flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 1158px) {
   .header-container {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
   }
 
   .header-logo {
-    color: #2e2f42;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.33;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    font-family: "Raleway", sans-serif;
     margin-right: 76px;
+  }
+  .nav-header-list {
+    margin-right: 340px;
+  }
+  .header-address-list {
+    flex-direction: row;
   }
 }
