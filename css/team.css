@@ -13,6 +13,7 @@
 
 .section-team-list {
   display: flex;
+  align-items: center;
   flex-direction: column;
   row-gap: 72px;
 }
@@ -76,6 +77,7 @@
   .section-team-list {
     flex-direction: row;
     column-gap: 24px;
+    row-gap: 64px;
     flex-wrap: wrap;
     padding: 0 92px;
   }

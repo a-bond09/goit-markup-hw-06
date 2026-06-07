@@ -4,10 +4,6 @@
   row-gap: 72px;
 }
 
-.section-features-item:not(:last-child) {
-  margin-bottom: 72px;
-}
-
 .features-list-icon {
   display: none;
 }
@@ -20,6 +16,10 @@
   text-align: center;
   color: #2e2f42;
   margin-bottom: 8px;
+}
+
+.section-features-text {
+  font-weight: 500;
 }
 
 @media screen and (min-width: 768px) {
@@ -66,5 +66,8 @@
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+  }
+  .section-features-text {
+    font-weight: 400;
   }
 }

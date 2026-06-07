@@ -200,7 +200,8 @@
   .container-footer {
     display: flex;
     flex-wrap: nowrap;
-    padding: 0 15px;
+    padding: 0;
+    gap: 0;
   }
 
   .footer-logo-part {

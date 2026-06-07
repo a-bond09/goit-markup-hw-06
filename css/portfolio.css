@@ -76,6 +76,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .section-portfolio-list {
+    row-gap: 72px;
+  }
+
   .section-portfolio-item {
     width: 356px;
   }
