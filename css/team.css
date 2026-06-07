@@ -13,7 +13,8 @@
 
 .section-team-list {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  row-gap: 72px;
 }
 
 .section-team-item {
@@ -24,6 +25,10 @@
     0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16),
     0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.section-team-item:not(:last-child) {
+  margin-bottom: 72px;
 }
 
 .container-team-text {
@@ -66,4 +71,26 @@
 .team-social-link-item:hover,
 .team-social-link-item:focus {
   background-color: #404bbf;
+}
+@media screen and (min-width: 768px) {
+  .section-team-list {
+    flex-direction: row;
+    column-gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .section-team-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .section-team-list {
+    display: flex;
+    gap: 24px;
+  }
+
+  .section-team-item {
+    width: calc((100% - 72px) / 4);
+  }
 }
